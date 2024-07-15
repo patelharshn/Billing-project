@@ -184,6 +184,21 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
                       </div>
 
                       <div class="col-md-3 mt-2">
+                        <div class="input-group input-group-static">
+                          <label class="labels">Broker </label>
+                          <?php if (isset($_SESSION['broker'])) {
+                          ?>
+                            <input type="text" class="form-control" value="<?php echo $_SESSION['broker'] ?>" name="broker" id="broker_id" style="font-weight: bold;">
+                          <?php
+                          } else {
+                          ?>
+                            <input type="text" class="form-control" name="broker" id="broker_id" style="font-weight: bold;">
+                          <?php
+                          } ?>
+                        </div>
+                      </div>
+
+                      <div class="col-md-3 mt-2">
                         <!-- <div class="input-group input-group-static"> -->
                         <label class="labels">Company </label>
                         <select class="form-select" id="comany_name_id" name="company_name" required style="border: 1px solid gray; padding:5px 5px 5px 5px;">
@@ -362,17 +377,26 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
             var challan_no = $('#cno').val();
             var tempo_no = $('#tempo_num_id').val();
             var quality = $('#quality').val();
+            var broker_id = $('#broker_id').val();
 
             if (meter_val == "") {
-              alert("Please enter METER...");
-            } else if (comany_name_id == "") {
-              alert("Please select Company Name...");
-            } else if (customer_name_id == "") {
-              alert("Please select Customer Name...");
-            } else if (tempo_no == "") {
-              alert("Please select Tempo Number...");
+              alert_message("error", "Please enter METER...");
+              $('#meter').focus();
             } else if (quality == "") {
-              alert("Please enter Quality...");
+              alert_message("error", "Please enter Quality...");
+              $('#quality').focus();
+            } else if (broker_id == "") {
+              alert_message("error", "Please enter Broker name...");
+              $('#broker_id').focus();
+            } else if (comany_name_id == "") {
+              alert_message("error", "Please select Company Name...");
+              $('#company_name_id').focus();
+            } else if (customer_name_id == "") {
+              alert_message("error", "Please select Customer Name...");
+              $('#customer_name_id').focus();
+            } else if (tempo_no == "") {
+              alert_message("error", "Please select Tempo Number...");
+              $('#tempo_num_id').focus();
             } else {
               $.ajax({
                 url: 'deliverychallan_class.php',
@@ -383,7 +407,8 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
                   customer_name: customer_name_id,
                   challan_no: challan_no,
                   tempo_no: tempo_no,
-                  quality: quality
+                  quality: quality,
+                  broker: broker_id
                 },
                 success: function(data) {
                   // alert("Challan Created Successfully");
@@ -393,17 +418,95 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
             }
           });
 
+          function alert_message(icon_name, message) {
+            Swal.fire({
+              icon: icon_name,
+              text: message,
+              showConfirmButton: false,
+              timer: 2700,
+              toast: true,
+              position: "top",
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+              }
+            });
+          }
+
+          // Press enter so select next text box
           $('#meter').keypress(function(event) {
-            console.log(event.which); //For Enter keycode is 13
+            // console.log(event.which); //For Enter keycode is 13
+            var quality = $('#quality').val();
+            var broker_id = $('#broker_id').val();
+            var comany_name_id = $('#comany_name_id').val();
+            var customer_name_id = $('#customer_name_id').val();
+            var tempo_no = $('#tempo_num_id').val();
+
             if (event.which == 13) {
-              $('#quality').focus();
+              if (quality == "") {
+                $('#quality').focus();
+              } else if (broker_id == "") {
+                $('#broker_id').focus();
+              } else if (comany_name_id == "") {
+                $('#comany_name_id').focus();
+              } else if (customer_name_id == "") {
+                $('#customer_name_id').focus();
+              } else if (tempo_no == "") {
+                $('#tempo_num_id').focus();
+              } else {
+                $('.btn_add_challan').click();
+              }
             }
           })
 
           $('#quality').keypress(function(event) {
-            console.log(event.which); //For Enter keycode is 13
+            // console.log(event.which); //For Enter keycode is 13
+            var quality = $('#quality').val();
+            var broker_id = $('#broker_id').val();
+            var comany_name_id = $('#comany_name_id').val();
+            var customer_name_id = $('#customer_name_id').val();
+            var tempo_no = $('#tempo_num_id').val();
+
             if (event.which == 13) {
-              $('.btn_add_challan').click();
+              if (quality == "") {
+                $('#quality').focus();
+              } else if (broker_id == "") {
+                $('#broker_id').focus();
+              } else if (comany_name_id == "") {
+                $('#comany_name_id').focus();
+              } else if (customer_name_id == "") {
+                $('#customer_name_id').focus();
+              } else if (tempo_no == "") {
+                $('#tempo_num_id').focus();
+              } else {
+                $('.btn_add_challan').click();
+              }
+            }
+          })
+
+          $('#broker_id').keypress(function(event) {
+            // console.log(event.which); //For Enter keycode is 13
+            var quality = $('#quality').val();
+            var broker_id = $('#broker_id').val();
+            var comany_name_id = $('#comany_name_id').val();
+            var customer_name_id = $('#customer_name_id').val();
+            var tempo_no = $('#tempo_num_id').val();
+
+            if (event.which == 13) {
+              if (quality == "") {
+                $('#quality').focus();
+              } else if (broker_id == "") {
+                $('#broker_id').focus();
+              } else if (comany_name_id == "") {
+                $('#comany_name_id').focus();
+              } else if (customer_name_id == "") {
+                $('#customer_name_id').focus();
+              } else if (tempo_no == "") {
+                $('#tempo_num_id').focus();
+              } else {
+                $('.btn_add_challan').click();
+              }
             }
           })
         </script>

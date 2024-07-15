@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_SESSION['challan_no'] = $_POST['challan_no'];
     $_SESSION['tempo_no'] = $_POST['tempo_no'];
     $_SESSION['quality'] = $_POST['quality'];
+    $_SESSION['broker'] = $_POST['broker'];
   }
 
   // ========================
@@ -68,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $challan_no = $_SESSION['challan_no'];
     $tempo_no = $_SESSION['tempo_no'];
     $quality = $_SESSION['quality'];
+    $broker = $_SESSION['broker'];
     date_default_timezone_set("Asia/Kolkata");
     $date = date("Y-m-d");
     $total_taka = count($_SESSION['challan']);
@@ -233,7 +235,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <div style="width: 50%; float: right; text-align: right;">
                     <p>Date :- <strong>' . $date . '</strong></p>
-                    <p>Broker :- <strong>DIRECT</strong></p>
+                    <p>Broker :- <strong>' . $broker . '</strong></p>
                     <p>Tempo :- ' . $tempo_no . '</p>
                 </div>
             </div>
