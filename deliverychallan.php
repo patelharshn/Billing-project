@@ -411,13 +411,13 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
                   broker: broker_id
                 },
                 success: function(data) {
-                  // alert("Challan Created Successfully");
                   location.reload();
                 }
               })
             }
           });
 
+          // Alert Message Function For show message START 
           function alert_message(icon_name, message) {
             Swal.fire({
               icon: icon_name,
@@ -433,8 +433,9 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
               }
             });
           }
+          // Alert Message Function For show message END
 
-          // Press enter so select next text box
+          // Press enter to select next text box START
           $('#meter').keypress(function(event) {
             // console.log(event.which); //For Enter keycode is 13
             var quality = $('#quality').val();
@@ -509,6 +510,7 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
               }
             }
           })
+          // Press enter to select next text box END
         </script>
 
         <script>
