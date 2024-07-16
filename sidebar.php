@@ -104,7 +104,8 @@ if ($row > 0) {
             <li class="nav-item">
                 <a class="nav-link text-white " href="billing.php">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">receipt_long</i>
+                        <!-- <i class="material-icons opacity-10">receipt_long</i> -->
+                        <i class="fa-solid fa-money-bill-1-wave" style="font-size: 17px;margin-left: 2.5px;"></i>
                     </div>
                     <span class="nav-link-text ms-1">Billing</span>
                 </a>
@@ -134,6 +135,15 @@ if ($row > 0) {
                         <i class="material-icons opacity-10">receipt_long</i>
                     </div>
                     <span class="nav-link-text ms-1">Delivery Challan</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white " href="deliverychallan_show.php">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-regular fa-file-lines" style="font-size: 18px;margin-left: 2.5px;"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Show Challan</span>
                 </a>
             </li>
 
