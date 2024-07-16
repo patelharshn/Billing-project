@@ -97,6 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // ========================
     $query_insert_header = "insert into challan_header(challan_no,customer_name,company_name,total_taka,total_meter,date,quality,broker,tempo_num,user_id) values('$challan_no','$customer_name','$company_name','$total_taka','$total_meter','$date','$quality','$broker','$tempo_no','$u_id')";
     $result_insert_header = mysqli_query($con, $query_insert_header);
+    
     foreach ($_SESSION['challan'] as $key => $val) {
       $meter = $val['meter'];
       $query_insert_header = "insert into challan_details(challan_no,customer_name,company_name,meter,date,user_id) values('$challan_no','$customer_name','$company_name','$meter','$date','$u_id')";
