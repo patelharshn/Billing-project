@@ -175,8 +175,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         .invoice-table {
             width: 100%;
-            border: 1;
-            // border-collapse: collapse;
+            // border: 1;
+            border-collapse: collapse;
             margin-bottom: 5px; /* Reduced margin */
         }
 
@@ -214,6 +214,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         .authorized {
             clear: both;
+        }
+
+        .total-meter-class
+        {
+          border-collapse: collapse;
         }
     </style>
 </head>
@@ -311,11 +316,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $html .= "</tr>";
     }
     $html .= '</tbody>
-            <div style="display:flex; justify-content: space-between; width:390%;padding:10px;">
+        </table>
+        <div style="display:flex; justify-content: space-between; width:98%;padding:10px;">
               <span><strong>Total Taka : ' . $total_taka . '</strong></span>
               <span style="float:right;"><strong>Total Meters : ' . $total_meter . '</strong></span>
-            </div>
-        </table>
+        </div>
         <div class="footer">
             <p><strong>NO DYEING GUARANTEE</strong></p>
             <div class="signature">
@@ -343,6 +348,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // unset($_SESSION['company']);
     // unset($_SESSION['customer']);
     // unset($_SESSION['challan_no']);
+    // unset($_SESSION['tempo_no']);
+    // unset($_SESSION['quality']);
+    // unset($_SESSION['broker']);
   }
 }
 
