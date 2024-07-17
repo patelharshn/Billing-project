@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2024 at 04:27 PM
+-- Generation Time: Jul 17, 2024 at 09:47 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -85,7 +85,7 @@ CREATE TABLE `challan_details` (
   `challan_no` int(255) NOT NULL,
   `customer_name` varchar(255) NOT NULL,
   `company_name` varchar(255) NOT NULL,
-  `meter` int(255) NOT NULL,
+  `meter` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `user_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -95,30 +95,102 @@ CREATE TABLE `challan_details` (
 --
 
 INSERT INTO `challan_details` (`id`, `challan_no`, `customer_name`, `company_name`, `meter`, `date`, `user_id`) VALUES
-(1, 0, 'Nireshbhai', 'maruti fabrics', 1, '2024-07-05', 1001),
-(2, 0, 'Nireshbhai', 'maruti fabrics', 2, '2024-07-05', 1001),
-(3, 0, 'Nireshbhai', 'maruti fabrics', 3, '2024-07-05', 1001),
-(4, 0, 'Nireshbhai', 'maruti fabrics', 4, '2024-07-05', 1001),
-(5, 0, 'Nireshbhai', 'maruti fabrics', 5, '2024-07-05', 1001),
-(6, 0, 'Nireshbhai', 'maruti fabrics', 6, '2024-07-05', 1001),
-(7, 0, 'Nireshbhai', 'maruti fabrics', 7, '2024-07-05', 1001),
-(8, 0, 'Nireshbhai', 'maruti fabrics', 8, '2024-07-05', 1001),
-(9, 0, 'Nireshbhai', 'maruti fabrics', 9, '2024-07-05', 1001),
-(10, 0, 'Nireshbhai', 'maruti fabrics', 10, '2024-07-05', 1001),
-(11, 0, 'Nireshbhai', 'maruti fabrics', 11, '2024-07-05', 1001),
-(12, 0, 'Nireshbhai', 'maruti fabrics', 12, '2024-07-05', 1001),
-(13, 1, 'Nireshbhai', '2nd company', 1, '2024-07-05', 1001),
-(14, 1, 'Nireshbhai', '2nd company', 2, '2024-07-05', 1001),
-(15, 1, 'Nireshbhai', '2nd company', 3, '2024-07-05', 1001),
-(16, 1, 'Nireshbhai', '2nd company', 4, '2024-07-05', 1001),
-(17, 1, 'Nireshbhai', '2nd company', 5, '2024-07-05', 1001),
-(18, 1, 'Nireshbhai', '2nd company', 6, '2024-07-05', 1001),
-(19, 1, 'Nireshbhai', '2nd company', 7, '2024-07-05', 1001),
-(20, 1, 'Nireshbhai', '2nd company', 8, '2024-07-05', 1001),
-(21, 1, 'Nireshbhai', '2nd company', 9, '2024-07-05', 1001),
-(22, 1, 'Nireshbhai', '2nd company', 10, '2024-07-05', 1001),
-(23, 1, 'Nireshbhai', '2nd company', 11, '2024-07-05', 1001),
-(24, 1, 'Nireshbhai', '2nd company', 12, '2024-07-05', 1001);
+(1, 6, 'Nireshbhai', 'ITprojects', '101', '2024-07-16', 1001),
+(2, 6, 'Nireshbhai', 'ITprojects', '102', '2024-07-16', 1001),
+(3, 6, 'Nireshbhai', 'ITprojects', '103', '2024-07-16', 1001),
+(4, 6, 'Nireshbhai', 'ITprojects', '104', '2024-07-16', 1001),
+(5, 6, 'Nireshbhai', 'ITprojects', '105', '2024-07-16', 1001),
+(6, 6, 'Nireshbhai', 'ITprojects', '106', '2024-07-16', 1001),
+(7, 6, 'Nireshbhai', 'ITprojects', '107', '2024-07-16', 1001),
+(8, 6, 'Nireshbhai', 'ITprojects', '108', '2024-07-16', 1001),
+(9, 6, 'Nireshbhai', 'ITprojects', '109', '2024-07-16', 1001),
+(10, 6, 'Nireshbhai', 'ITprojects', '110', '2024-07-16', 1001),
+(11, 6, 'Nireshbhai', 'ITprojects', '111', '2024-07-16', 1001),
+(12, 6, 'Nireshbhai', 'ITprojects', '112.5', '2024-07-16', 1001),
+(13, 6, 'Nireshbhai', 'ITprojects', '113.20', '2024-07-16', 1001),
+(14, 6, 'Nireshbhai', 'ITprojects', '114', '2024-07-16', 1001),
+(15, 6, 'Nireshbhai', 'ITprojects', '115', '2024-07-16', 1001),
+(16, 6, 'Nireshbhai', 'ITprojects', '116', '2024-07-16', 1001),
+(17, 6, 'Nireshbhai', 'ITprojects', '117', '2024-07-16', 1001),
+(18, 6, 'Nireshbhai', 'ITprojects', '118', '2024-07-16', 1001),
+(19, 6, 'Nireshbhai', 'ITprojects', '119', '2024-07-16', 1001),
+(20, 6, 'Nireshbhai', 'ITprojects', '120', '2024-07-16', 1001),
+(21, 6, 'Nireshbhai', 'ITprojects', '121', '2024-07-16', 1001),
+(22, 6, 'Nireshbhai', 'ITprojects', '122', '2024-07-16', 1001),
+(23, 6, 'Nireshbhai', 'ITprojects', '123', '2024-07-16', 1001),
+(24, 6, 'Nireshbhai', 'ITprojects', '125.6', '2024-07-16', 1001),
+(25, 6, 'Nireshbhai', 'ITprojects', '101', '2024-07-16', 1001),
+(26, 6, 'Nireshbhai', 'ITprojects', '102', '2024-07-16', 1001),
+(27, 6, 'Nireshbhai', 'ITprojects', '103', '2024-07-16', 1001),
+(28, 6, 'Nireshbhai', 'ITprojects', '104', '2024-07-16', 1001),
+(29, 6, 'Nireshbhai', 'ITprojects', '105', '2024-07-16', 1001),
+(30, 6, 'Nireshbhai', 'ITprojects', '106', '2024-07-16', 1001),
+(31, 6, 'Nireshbhai', 'ITprojects', '107', '2024-07-16', 1001),
+(32, 6, 'Nireshbhai', 'ITprojects', '108', '2024-07-16', 1001),
+(33, 6, 'Nireshbhai', 'ITprojects', '109', '2024-07-16', 1001),
+(34, 6, 'Nireshbhai', 'ITprojects', '110', '2024-07-16', 1001),
+(35, 6, 'Nireshbhai', 'ITprojects', '111', '2024-07-16', 1001),
+(36, 6, 'Nireshbhai', 'ITprojects', '112.5', '2024-07-16', 1001),
+(37, 6, 'Nireshbhai', 'ITprojects', '113.20', '2024-07-16', 1001),
+(38, 6, 'Nireshbhai', 'ITprojects', '114', '2024-07-16', 1001),
+(39, 6, 'Nireshbhai', 'ITprojects', '115', '2024-07-16', 1001),
+(40, 6, 'Nireshbhai', 'ITprojects', '116', '2024-07-16', 1001),
+(41, 6, 'Nireshbhai', 'ITprojects', '117', '2024-07-16', 1001),
+(42, 6, 'Nireshbhai', 'ITprojects', '118', '2024-07-16', 1001),
+(43, 6, 'Nireshbhai', 'ITprojects', '119', '2024-07-16', 1001),
+(44, 6, 'Nireshbhai', 'ITprojects', '120', '2024-07-16', 1001),
+(45, 6, 'Nireshbhai', 'ITprojects', '121', '2024-07-16', 1001),
+(46, 6, 'Nireshbhai', 'ITprojects', '122', '2024-07-16', 1001),
+(47, 6, 'Nireshbhai', 'ITprojects', '123', '2024-07-16', 1001),
+(48, 6, 'Nireshbhai', 'ITprojects', '125.6', '2024-07-16', 1001),
+(49, 6, 'Nireshbhai', 'ITprojects', '101', '2024-07-16', 1001),
+(50, 6, 'Nireshbhai', 'ITprojects', '102', '2024-07-16', 1001),
+(51, 6, 'Nireshbhai', 'ITprojects', '103', '2024-07-16', 1001),
+(52, 6, 'Nireshbhai', 'ITprojects', '104', '2024-07-16', 1001),
+(53, 6, 'Nireshbhai', 'ITprojects', '105', '2024-07-16', 1001),
+(54, 6, 'Nireshbhai', 'ITprojects', '106', '2024-07-16', 1001),
+(55, 6, 'Nireshbhai', 'ITprojects', '107', '2024-07-16', 1001),
+(56, 6, 'Nireshbhai', 'ITprojects', '108', '2024-07-16', 1001),
+(57, 6, 'Nireshbhai', 'ITprojects', '109', '2024-07-16', 1001),
+(58, 6, 'Nireshbhai', 'ITprojects', '110', '2024-07-16', 1001),
+(59, 6, 'Nireshbhai', 'ITprojects', '111', '2024-07-16', 1001),
+(60, 6, 'Nireshbhai', 'ITprojects', '112.5', '2024-07-16', 1001),
+(61, 6, 'Nireshbhai', 'ITprojects', '113.20', '2024-07-16', 1001),
+(62, 6, 'Nireshbhai', 'ITprojects', '114', '2024-07-16', 1001),
+(63, 6, 'Nireshbhai', 'ITprojects', '115', '2024-07-16', 1001),
+(64, 6, 'Nireshbhai', 'ITprojects', '116', '2024-07-16', 1001),
+(65, 6, 'Nireshbhai', 'ITprojects', '117', '2024-07-16', 1001),
+(66, 6, 'Nireshbhai', 'ITprojects', '118', '2024-07-16', 1001),
+(67, 6, 'Nireshbhai', 'ITprojects', '119', '2024-07-16', 1001),
+(68, 6, 'Nireshbhai', 'ITprojects', '120', '2024-07-16', 1001),
+(69, 6, 'Nireshbhai', 'ITprojects', '121', '2024-07-16', 1001),
+(70, 6, 'Nireshbhai', 'ITprojects', '122', '2024-07-16', 1001),
+(71, 6, 'Nireshbhai', 'ITprojects', '123', '2024-07-16', 1001),
+(72, 6, 'Nireshbhai', 'ITprojects', '125.6', '2024-07-16', 1001),
+(73, 6, 'Nireshbhai', 'ITprojects', '101', '2024-07-16', 1001),
+(74, 6, 'Nireshbhai', 'ITprojects', '102', '2024-07-16', 1001),
+(75, 6, 'Nireshbhai', 'ITprojects', '103', '2024-07-16', 1001),
+(76, 6, 'Nireshbhai', 'ITprojects', '104', '2024-07-16', 1001),
+(77, 6, 'Nireshbhai', 'ITprojects', '105', '2024-07-16', 1001),
+(78, 6, 'Nireshbhai', 'ITprojects', '106', '2024-07-16', 1001),
+(79, 6, 'Nireshbhai', 'ITprojects', '107', '2024-07-16', 1001),
+(80, 6, 'Nireshbhai', 'ITprojects', '108', '2024-07-16', 1001),
+(81, 6, 'Nireshbhai', 'ITprojects', '109', '2024-07-16', 1001),
+(82, 6, 'Nireshbhai', 'ITprojects', '110', '2024-07-16', 1001),
+(83, 6, 'Nireshbhai', 'ITprojects', '111', '2024-07-16', 1001),
+(84, 6, 'Nireshbhai', 'ITprojects', '112.5', '2024-07-16', 1001),
+(85, 6, 'Nireshbhai', 'ITprojects', '113.20', '2024-07-16', 1001),
+(86, 6, 'Nireshbhai', 'ITprojects', '114', '2024-07-16', 1001),
+(87, 6, 'Nireshbhai', 'ITprojects', '115', '2024-07-16', 1001),
+(88, 6, 'Nireshbhai', 'ITprojects', '116', '2024-07-16', 1001),
+(89, 6, 'Nireshbhai', 'ITprojects', '117', '2024-07-16', 1001),
+(90, 6, 'Nireshbhai', 'ITprojects', '118', '2024-07-16', 1001),
+(91, 6, 'Nireshbhai', 'ITprojects', '119', '2024-07-16', 1001),
+(92, 6, 'Nireshbhai', 'ITprojects', '120', '2024-07-16', 1001),
+(93, 6, 'Nireshbhai', 'ITprojects', '121', '2024-07-16', 1001),
+(94, 6, 'Nireshbhai', 'ITprojects', '122', '2024-07-16', 1001),
+(95, 6, 'Nireshbhai', 'ITprojects', '123', '2024-07-16', 1001),
+(96, 6, 'Nireshbhai', 'ITprojects', '125.6', '2024-07-16', 1001);
 
 -- --------------------------------------------------------
 
@@ -132,8 +204,11 @@ CREATE TABLE `challan_header` (
   `customer_name` varchar(255) NOT NULL,
   `company_name` varchar(255) NOT NULL,
   `total_taka` int(255) NOT NULL,
-  `total_meter` int(255) NOT NULL,
+  `total_meter` varchar(255) NOT NULL,
   `date` date NOT NULL,
+  `quality` varchar(255) NOT NULL,
+  `broker` varchar(255) NOT NULL,
+  `tempo_num` varchar(255) NOT NULL,
   `user_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -141,8 +216,35 @@ CREATE TABLE `challan_header` (
 -- Dumping data for table `challan_header`
 --
 
-INSERT INTO `challan_header` (`id`, `challan_no`, `customer_name`, `company_name`, `total_taka`, `total_meter`, `date`, `user_id`) VALUES
-(2, 1, 'Nireshbhai', '2nd company', 12, 78, '2024-07-05', 1001);
+INSERT INTO `challan_header` (`id`, `challan_no`, `customer_name`, `company_name`, `total_taka`, `total_meter`, `date`, `quality`, `broker`, `tempo_num`, `user_id`) VALUES
+(1, 6, 'Nireshbhai', 'ITprojects', 24, '2702.3', '2024-07-16', 'QWE', 'PATEL JI', 'GJ05AB4086', 1001),
+(2, 6, 'Nireshbhai', 'ITprojects', 24, '2702.3', '2024-07-16', 'QWE', 'PATEL JI', 'GJ05AB4086', 1001),
+(3, 6, 'Nireshbhai', 'ITprojects', 24, '2702.3', '2024-07-16', 'QWE', 'PATEL JI', 'GJ05AB4086', 1001),
+(4, 6, 'Nireshbhai', 'ITprojects', 24, '2702.3', '2024-07-16', 'QWE', 'PATEL JI', 'GJ05AB4086', 1001);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `company`
+--
+
+CREATE TABLE `company` (
+  `id` int(255) NOT NULL,
+  `company_name` varchar(255) NOT NULL,
+  `company_address` varchar(255) NOT NULL,
+  `company_mobile` varchar(15) NOT NULL,
+  `company_gst` varchar(255) NOT NULL,
+  `company_logo` varchar(255) NOT NULL,
+  `user_id` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `company`
+--
+
+INSERT INTO `company` (`id`, `company_name`, `company_address`, `company_mobile`, `company_gst`, `company_logo`, `user_id`) VALUES
+(1, 'ITprojects', 'Surat, Althan', '1234567890', '123456789012345', '2024.png', 1001),
+(2, 'patelmobile', 'XYZ', '1234567890', '123456789012345', '5.jpg', 1001);
 
 -- --------------------------------------------------------
 
@@ -248,6 +350,26 @@ CREATE TABLE `supplier` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tempo`
+--
+
+CREATE TABLE `tempo` (
+  `id` int(255) NOT NULL,
+  `tempo_number` varchar(255) NOT NULL,
+  `user_id` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tempo`
+--
+
+INSERT INTO `tempo` (`id`, `tempo_number`, `user_id`) VALUES
+(1, 'GJ05AB1234', 1001),
+(2, 'GJ05AB4086', 1001);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -270,7 +392,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `shopname`, `email`, `username`, `password`, `mobile_no`, `gstnumber`, `address`, `state`, `image`, `last_login`) VALUES
-(1001, 'Patel Mobile', 'hp004086@gmail.com', 'HARSH PATEL', '$2y$10$V88BifLZIAN0zXFR3Lkng.fk4qHD4mREgy8VH6lzSpnIZS8DKfoJK', NULL, NULL, NULL, 'Gujarat', 'MS_00605.JPG', '05/07/2024 07:21:25 pm');
+(1001, 'Patel Mobile', 'hp004086@gmail.com', 'HARSH PATEL', '$2y$10$V88BifLZIAN0zXFR3Lkng.fk4qHD4mREgy8VH6lzSpnIZS8DKfoJK', NULL, NULL, NULL, 'Gujarat', 'MS_00605.JPG', '16/07/2024 09:01:43 pm');
 
 --
 -- Indexes for dumped tables
@@ -309,6 +431,12 @@ ALTER TABLE `challan_details`
 ALTER TABLE `challan_header`
   ADD PRIMARY KEY (`id`),
   ADD KEY `uidd` (`user_id`);
+
+--
+-- Indexes for table `company`
+--
+ALTER TABLE `company`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customer`
@@ -352,6 +480,13 @@ ALTER TABLE `supplier`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tempo`
+--
+ALTER TABLE `tempo`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `tempo_user_id` (`user_id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -384,13 +519,19 @@ ALTER TABLE `billing_header`
 -- AUTO_INCREMENT for table `challan_details`
 --
 ALTER TABLE `challan_details`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT for table `challan_header`
 --
 ALTER TABLE `challan_header`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `company`
+--
+ALTER TABLE `company`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -427,6 +568,12 @@ ALTER TABLE `purchase`
 --
 ALTER TABLE `supplier`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
+
+--
+-- AUTO_INCREMENT for table `tempo`
+--
+ALTER TABLE `tempo`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -486,6 +633,12 @@ ALTER TABLE `product`
 ALTER TABLE `purchase`
   ADD CONSTRAINT `p_id` FOREIGN KEY (`p_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `u_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tempo`
+--
+ALTER TABLE `tempo`
+  ADD CONSTRAINT `tempo_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
