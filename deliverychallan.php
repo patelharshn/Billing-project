@@ -152,7 +152,7 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
               <div class="card">
                 <div class="table-responsive">
                   <div class="card-header">
-                    <h4>Challan</h4>
+                    <h4 id="challan_id">Challan</h4>
                     <div class="row mt-3">
                       <div class="col-md-3 mt-2">
                         <div class="input-group input-group-static">
