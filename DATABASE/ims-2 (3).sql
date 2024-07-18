@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2024 at 09:47 AM
+-- Generation Time: Jul 18, 2024 at 09:41 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -392,7 +392,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `shopname`, `email`, `username`, `password`, `mobile_no`, `gstnumber`, `address`, `state`, `image`, `last_login`) VALUES
-(1001, 'Patel Mobile', 'hp004086@gmail.com', 'HARSH PATEL', '$2y$10$V88BifLZIAN0zXFR3Lkng.fk4qHD4mREgy8VH6lzSpnIZS8DKfoJK', NULL, NULL, NULL, 'Gujarat', 'MS_00605.JPG', '16/07/2024 09:01:43 pm');
+(1001, 'Patel Mobile', 'hp004086@gmail.com', 'HARSH PATEL', '$2y$10$V88BifLZIAN0zXFR3Lkng.fk4qHD4mREgy8VH6lzSpnIZS8DKfoJK', NULL, NULL, NULL, 'Gujarat', 'MS_00605.JPG', '18/07/2024 01:02:31 pm');
 
 --
 -- Indexes for dumped tables
