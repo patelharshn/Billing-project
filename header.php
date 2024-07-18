@@ -43,11 +43,14 @@ $result_last_login = mysqli_query($con, $query_last_login);
     <link id="pagestyle" href="assets/css/material-dashboard.min.css" rel="stylesheet" />
     <!-- CDN Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- GSAP CDN For Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" integrity="sha512-xAxjKW1J/R4TFytv43xvQ7jFTrJlBzsDOH/Aw0fFc2nvarQkE3d08lTicjzUsZJYDoHYDCpwsUUqOJXh34A1sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <!-- <body class="g-sidenav-show  bg-gray-200" style="background-color: rgb(77, 69, 69);"> -->
 
-<body class="g-sidenav-show" style="background-color: #e0fcff">
+<body class="g-sidenav-show" style="background-color: #e0fcff;cursor: url('assets/images/cursor.png'),auto;">
     <?php include('sidebar.php'); ?>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <?php include('navbar.php'); ?>

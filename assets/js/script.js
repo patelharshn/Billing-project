@@ -1,6 +1,6 @@
-var challan = document.getElementById("challan_id");
+let tl = gsap.timeline({});
 
-
-var split = new SplitText(challan, {type: "chars,words,lines", position: "absolute"});
-
-console.log(split);
+gsap.to(".challan_class h4",{
+  ease: Expo.easeInOut,
+  top: 0
+})

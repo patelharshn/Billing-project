@@ -69,6 +69,15 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
     -webkit-appearance: none;
     margin: 0;
   }
+
+  input {
+    cursor: url("assets/images/computer-mouse\ \(1\).png"), text;
+  }
+
+  select,
+  label {
+    cursor: url("assets/images/cursor.png"), default;
+  }
 </style>
 <pre><?php //echo count($_SESSION['challan']) 
       ?></pre>
@@ -152,7 +161,7 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
               <div class="card">
                 <div class="table-responsive">
                   <div class="card-header">
-                    <h4 id="challan_id">Challan</h4>
+                    <h4 class="challan_text_class" style="letter-spacing: 0.2em;text-decoration: underline;">Challan</h4>
                     <div class="row mt-3">
                       <div class="col-md-3 mt-2">
                         <div class="input-group input-group-static">
@@ -164,7 +173,7 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
                       <div class="col-md-3 mt-2">
                         <div class="input-group input-group-static">
                           <label class="labels">Meter </label>
-                          <input type="number" class="form-control" name="meter" id="meter" style="font-weight: bold;">
+                          <input type="number" class="form-control" name="meter" id="meter" style='font-weight: bold;'>
                         </div>
                       </div>
 
@@ -526,6 +535,40 @@ if (isset($_SESSION['sale_message']) && $_SESSION['sale_message'] != '') {
               }
             })
           });
+
+
+          // START Animation
+          var tag = document.querySelector(".challan_text_class");
+          var splittext = tag.textContent;
+          var splitedText = splittext.split("");
+
+          var clutter = "";
+
+          splitedText.forEach(function(elem, idx) {
+            clutter += `<span class='A'>${elem}</span>`;
+          });
+
+          tag.innerHTML = clutter;
+
+          var tl = gsap.timeline({
+            repeat: -1
+          });
+
+          tl.from(".A", {
+            duration: 0.5,
+            delay: 0.5,
+            opacity: 0,
+            ease: "power3.out",
+            stagger: 0.1,
+          });
+          tl.from(".A", {
+            duration: 0.5,
+            delay: 0.5,
+            opacity: 0,
+            ease: "power3.in",
+            stagger: -0.1,
+          });
+          // END Text Animation
         </script>
         <!-- Main Content End -->
         <?php
